@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ACPポータルページ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+      background-color: #f4f7f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* 表紙画像 */
+    .cover {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+
+    .cover img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .caption {
+      margin-top: 16px;
+      font-size: 1rem;
+      color: #566573;
+    }
+
+    /* ACP哲学メッセージ */
+    .philosophy {
+      max-width: 900px;
+      margin: 20px auto 30px;
+      padding: 18px 20px;
+      background: #ffffff;
+      border-left: 6px solid #1f3b57;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    /* カードレイアウト */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 0 20px 40px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      border-left: 10px solid;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #1f3b57;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 10px 16px;
+      background: #1f3b57;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .card a:hover {
+      background: #2e4a6b;
+    }
+
+    /* 色分け */
+    .family { border-color: #5dade2; }
+    .cm { border-color: #58d68d; }
+    .medical { border-color: #f5b041; }
+    .economic { border-color: #af7ac5; }
+    .decision { border-color: #ec7063; }
+
+    /* スマホ最適化 */
+    @media (max-width: 600px) {
+      .cover { padding: 20px 12px; }
+      .caption { font-size: 0.85rem; }
+      .philosophy { font-size: 0.85rem; padding: 14px 16px; }
+      .card { padding: 16px; }
+      .card h2 { font-size: 1.05rem; }
+      .card p { font-size: 0.85rem; }
+      .card a { width: 100%; padding: 12px; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 表紙画像 -->
+  <div class="cover">
+    <img src="acp_cover.png" alt="ACP表紙画像">
+    <div class="caption">ACPのイメージ図。自分らしく最後までを実践するための道筋です。</div>
+  </div>
+
+  <!-- ACP哲学メッセージ -->
+  <div class="philosophy">
+    <strong>【ACPの基本哲学】</strong><br>
+    ACPは「本人の価値観」を中心に据えながら、<br>
+    生活・医療・支援の現実と折り合いをつけていくプロセスです。<br><br>
+
+    ● ① 自分らしさ（価値観）を確認し、<br>
+    ● ② 続ける条件（生活・支援）を整え、<br>
+    ● ③ 見直し（変化への対応）を繰り返しながら、<br>
+    ● ④ 次のステージへ向かう。<br><br>
+
+    この循環を支えるために、本人・家族・CM・医療者が同じ地図を共有することが重要です。
+  </div>
+
+  <!-- カード一覧 -->
+  <div class="container">
+
+    <div class="card family">
+      <h2>🧭 本人・家族用 ACPシート</h2>
+      <p>本人の価値観・自分らしさ・避けたい状態を整理する中心シート。</p>
+      <a href="家族用.html">開く</a>
+    </div>
+
+    <div class="card cm">
+      <h2>🛠️ CM用 ACPシート</h2>
+      <p>生活環境・支援体制を整理し、価値観に沿った生活を支えるためのシート。</p>
+      <a href="CM用.html">開く</a>
+    </div>
+
+    <div class="card medical">
+      <h2>🏥 医療者用 ACPシート</h2>
+      <p>医療的価値観（延命・苦痛緩和など）を共有するためのシート。</p>
+      <a href="医療者用.html">開く</a>
+    </div>
+
+    <div class="card economic">
+      <h2>💰 経済的制約がある場合（CM用）</h2>
+      <p>制度・資源・費用の調整を行うための別ルート。</p>
+      <a href="経済的制約がある場合.html">開く</a>
+    </div>
+
+    <div class="card decision">
+      <h2>⚖️ 自己決定支援が必要な場合（倫理カンファ用）</h2>
+      <p>推定意思に基づき、関係者で最善の方針を決めるためのシート。</p>
+      <a href="意思決定支援用.html">開く</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
