@@ -15,8 +15,6 @@
       background-color: #f9f9f9;
       color: #333;
       line-height: 1.8;
-      word-break: break-word;
-      overflow-wrap: break-word;
     }
 
     .slide {
@@ -34,13 +32,16 @@
       color: #00695c;
     }
 
-    .slide p {
+    .slide p,
+    .slide blockquote {
       font-size: 1.2em;
       margin: 0.8em 0;
+      line-break: strict;
+      word-break: normal;
+      overflow-wrap: break-word;
     }
 
     .slide blockquote {
-      font-size: 1.3em;
       font-weight: bold;
       color: #37474f;
       margin-top: 2em;
@@ -75,8 +76,6 @@
   </style>
 </head>
 <body>
-
-
 
   <div class="slide">
     <h2>1｜未来を変える鍵</h2>
@@ -159,3 +158,4 @@
 
 </body>
 </html>
+
