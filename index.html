@@ -15,7 +15,7 @@
       line-height: 1.7;
     }
 
-    /* 表紙画像 */
+    /* 表紙 */
     .cover {
       width: 100%;
       max-width: 900px;
@@ -25,22 +25,19 @@
       position: relative;
     }
 
-    /* ★ タイトル（黒・左寄せ・大きめ） */
     .cover-title {
       position: absolute;
       top: 20px;
       left: 20px;
-      font-size: 3rem;       /* PC版 */
+      font-size: 3rem;
       font-weight: 800;
-      color: #000000;
+      color: #000;
       letter-spacing: 2px;
       pointer-events: none;
-      text-align: left;
     }
 
     .cover img {
       width: 100%;
-      height: auto;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
@@ -51,68 +48,47 @@
       color: #566573;
     }
 
-    /* ★ ACP哲学＋右側リンクを横並びにするラッパー */
+    /* ACP哲学＋右リンク */
     .philosophy-wrapper {
       max-width: 1100px;
       margin: 20px auto 30px;
       display: flex;
       gap: 20px;
-      align-items: stretch;
       padding: 0 20px;
     }
 
-    /* ACP哲学メッセージ */
     .philosophy {
       flex: 2;
       padding: 18px 20px;
-      background: #ffffff;
+      background: #fff;
       border-left: 6px solid #1f3b57;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       font-size: 0.95rem;
-      color: #333;
     }
 
-    /* ★ 右側リンクボックス */
     .acp-side-link {
       flex: 1;
       background: #e8f4f8;
       border-left: 6px solid #5dade2;
       border-radius: 8px;
       padding: 14px 18px;
-      font-size: 0.95rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       text-align: center;
     }
 
-    .acp-side-text {
-      color: #1f3b57;
-      font-weight: 600;
-      line-height: 1.5;
-    }
-
-    /* ★ 右側リンク専用の開くボタン（中央寄せ） */
     .acp-side-button {
-      display: inline-block;
       padding: 10px 16px;
       background: #1f3b57;
-      color: #fff !important;
+      color: #fff;
       text-decoration: none;
       border-radius: 6px;
       font-size: 0.9rem;
-      text-align: center;
-      margin: 0 auto;
     }
 
-    .acp-side-button:hover {
-      background: #2e4a6b;
-    }
-
-    /* カードレイアウト */
+    /* カード一覧 */
     .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -123,51 +99,33 @@
     }
 
     .card {
-      background: #ffffff;
+      background: #fff;
       border-radius: 12px;
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       border-left: 10px solid;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-align: center;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     }
 
     .card h2 {
       margin-top: 0;
       font-size: 1.2rem;
-      display: flex;
-      align-items: center;
-      gap: 6px;
       color: #1f3b57;
-      justify-content: center;
     }
 
     .card p {
       font-size: 0.9rem;
       color: #555;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
-    /* ★ カード内の開くボタンも中央寄せ */
     .card a {
-      display: inline-block;
       padding: 10px 16px;
       background: #1f3b57;
       color: #fff;
       text-decoration: none;
       border-radius: 6px;
       font-size: 0.9rem;
-      text-align: center;
-      margin: 0 auto;
-    }
-
-    .card a:hover {
-      background: #2e4a6b;
     }
 
     /* 色分け */
@@ -177,118 +135,88 @@
     .economic { border-color: #af7ac5; }
     .decision { border-color: #ec7063; }
 
-    /* スマホ最適化 */
+    /* スマホ */
     @media (max-width: 700px) {
       .philosophy-wrapper {
         flex-direction: column;
       }
     }
 
-    /* ★ スマホ版タイトルを 3/4 に縮小 */
     @media (max-width: 600px) {
-      .cover-title {
-        font-size: 2.25rem; /* ← 3rem × 0.75 */
-      }
-
-      .cover { padding: 20px 12px; }
+      .cover-title { font-size: 2.25rem; }
       .caption { font-size: 0.85rem; }
-      .philosophy { font-size: 0.85rem; padding: 14px 16px; }
-      .card { padding: 16px; }
+      .philosophy { font-size: 0.85rem; }
       .card h2 { font-size: 1.05rem; }
       .card p { font-size: 0.85rem; }
-      .card a { width: auto; padding: 12px; font-size: 0.95rem; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- 表紙画像（タイトル重ね） -->
   <div class="cover">
     <div class="cover-title">ACP小樽モデル</div>
     <img src="acp_cover.png" alt="ACP表紙画像">
     <div class="caption">ACPは、自分らしく最後までを実践するための道標です。</div>
   </div>
 
-  <!-- ★ ACP哲学メッセージ + 右側リンク -->
   <div class="philosophy-wrapper">
-
     <div class="philosophy">
       <strong>【ACPの基本哲学】</strong><br>
       ACPは「本人の価値観」を中心に据えながら、<br>
-      生活・医療・支援の現実と折り合いをつけていくプロセスです。<br><br>
-
-      ● ① 自分らしさ（価値観）を確認し、<br>
-      ● ② 今を続ける条件（生活・支援）を整え、<br>
-      ● ③ 見直し（変化への対応）を繰り返し、<br>
-      ● ④ 難しくなったら、次のステージへ向かう。<br><br>
-
-      この循環を支えるために、本人・家族・CM・医療者が同じ地図を共有することが重要です。
+      生活・医療・支援の現実と折り合いをつけていくプロセスです。
     </div>
 
     <div class="acp-side-link">
-      <div class="acp-side-text">
-        自分の親と話し合いたいときの切り出し方
-      </div>
+      <div>自分の親と話し合いたいときの切り出し方</div>
       <a class="acp-side-button" href="親との対話.html">開く</a>
     </div>
-
   </div>
 
-  <!-- カード一覧 -->
   <div class="container">
 
     <div class="card family">
       <h2>🧭 本人・家族用 ACPシート</h2>
-      <p>本人の価値観・自分らしさ・避けたい状態を整理する中心シート。</p>
+      <p>本人の価値観・自分らしさを整理する中心シート。</p>
       <a href="家族用.html">開く</a>
     </div>
 
     <div class="card cm">
       <h2>🛠️ CM用 ACPシート</h2>
-      <p>生活環境・支援体制を整理し、価値観に沿った生活を支えるためのシート。</p>
+      <p>生活環境・支援体制を整理するためのシート。</p>
       <a href="CM用.html">開く</a>
     </div>
 
     <div class="card medical">
       <h2>🏥 医療者用 ACPシート</h2>
-      <p>医療的価値観（延命・苦痛緩和など）を共有するためのシート。</p>
+      <p>医療的価値観を共有するためのシート。</p>
       <a href="医療者用.html">開く</a>
     </div>
 
     <div class="card economic">
-      <h2>💰 経済的制約がある場合（CM用）</h2>
-      <p>制度・資源・費用の調整を行うための別ルート。</p>
+      <h2>💰 経済的制約がある場合</h2>
+      <p>制度・資源・費用の調整を行う別ルート。</p>
       <a href="経済的制約がある場合.html">開く</a>
     </div>
 
     <div class="card decision">
-      <h2>⚖️ 意思決定支援が必要な場合（倫理カンファ用）</h2>
-      <p>推定意思に基づき、関係者で最善の方針を決めるためのシート。</p>
-      <a href="意思決定支援用.html">開く</a>     
+      <h2>
+        ⚖️ 意思決定支援が必要な場合<br>
+        <span style="font-size:0.9em; font-weight:normal; color:#555;">
+          （倫理カンファ用）
+        </span>
+      </h2>
+      <p>関係者で最善の方針を決めるためのシート。</p>
+      <a href="意思決定支援用.html">開く</a>
     </div>
 
-    <div class="card lifeend">
-     <h2>🌅 人生の終着点について考えるページ</h2>
-     <p>最近の変化や、これからの時間の過ごし方について考えるためのページです。</p>
-     <a href="人生の終着点.html">開く</a>
+    <div class="card medical">
+      <h2>📊 医療従事者向け：小樽とACP</h2>
+      <p>小樽の医療構造とACP文化の提案スライド。</p>
+      <a href="小樽とACP.html">開く</a>
     </div>
-
-    </div>
-
-　　<div class="card medical">
-  　　<h2>📊 医療従事者向け：小樽とACP</h2>
-  　　<p>小樽の医療構造とACP文化の定着に向けた提案スライドです。</p>
-  　　<a href="小樽とACP.html" target="_blank">開く</a>
-　　</div>
 
   </div>
 
 </body>
 </html>
-
-
-
-
-
-
