@@ -6,151 +6,152 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-      background-color: #f4f7f9;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      line-height: 1.7;
-    }
+   body {
+  font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  background-color: #f4f7f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.7;
+}
 
-    /* 表紙 */
-    .cover {
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px 20px;
-      text-align: center;
-      position: relative;
-    }
+/* 表紙 */
+.cover {
+  width: 100%;
+  max-width: 1100px; /* ← カードと同じ幅に統一 */
+  margin: 0 auto;
+  padding: 40px 20px 20px;
+  text-align: center;
+  position: relative;
+}
 
-    .cover-title {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 3rem;
-      font-weight: 800;
-      color: #000;
-      letter-spacing: 2px;
-      pointer-events: none;
-    }
+.cover-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #000;
+  letter-spacing: 2px;
+  pointer-events: none;
+}
 
-    .cover img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+.cover img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
-    .caption {
-      margin-top: 16px;
-      font-size: 1rem;
-      color: #566573;
-    }
+.caption {
+  margin-top: 16px;
+  font-size: 1rem;
+  color: #566573;
+}
 
-    /* ACP哲学＋右リンク */
-    .philosophy-wrapper {
-      max-width: 1100px;
-      margin: 20px auto 30px;
-      display: flex;
-      gap: 20px;
-      padding: 0 20px;
-    }
+/* ACP哲学＋右リンク */
+.philosophy-wrapper {
+  max-width: 1100px;
+  margin: 20px auto 30px;
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+}
 
-    .philosophy {
-      flex: 2;
-      padding: 18px 20px;
-      background: #fff;
-      border-left: 6px solid #1f3b57;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      font-size: 0.95rem;
-    }
+.philosophy {
+  flex: 2;
+  padding: 18px 20px;
+  background: #fff;
+  border-left: 6px solid #1f3b57;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-size: 0.95rem;
+}
 
-    .acp-side-link {
-      flex: 1;
-      background: #e8f4f8;
-      border-left: 6px solid #5dade2;
-      border-radius: 8px;
-      padding: 14px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
-    }
+.acp-side-link {
+  flex: 1;
+  background: #e8f4f8;
+  border-left: 6px solid #5dade2;
+  border-radius: 8px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
 
-    .acp-side-button {
-      padding: 10px 16px;
-      background: #1f3b57;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 0.9rem;
-    }
+.acp-side-button {
+  padding: 10px 16px;
+  background: #1f3b57;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
 
-    /* カード一覧 */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 0 20px 40px;
-    }
+/* カード一覧 */
+.container {
+  max-width: 1100px; /* ← cover と完全一致 */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px 40px;
+}
 
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      border-left: 10px solid;
-      text-align: center;
-    }
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border-left: 10px solid;
+  text-align: center;
+}
 
-    .card h2 {
-      margin-top: 0;
-      font-size: 1.2rem;
-      color: #1f3b57;
-      font-weight: 700;
-    }
+.card h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #1f3b57;
+  font-weight: 700;
+}
 
-    .card p {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 16px;
-    }
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 16px;
+}
 
-    .card a {
-      padding: 10px 16px;
-      background: #1f3b57;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 0.9rem;
-    }
+.card a {
+  padding: 10px 16px;
+  background: #1f3b57;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
 
-    /* 色分け */
-    .family { border-color: #5dade2; }
-    .cm { border-color: #58d68d; }
-    .medical { border-color: #f5b041; }
-    .economic { border-color: #af7ac5; }
-    .decision { border-color: #ec7063; }
-    .lifeend { border-color: #7fb3d5; }
+/* 色分け */
+.family { border-color: #5dade2; }
+.cm { border-color: #58d68d; }
+.medical { border-color: #f5b041; }
+.economic { border-color: #af7ac5; }
+.decision { border-color: #ec7063; }
+.lifeend { border-color: #7fb3d5; }
 
-    /* スマホ */
-    @media (max-width: 700px) {
-      .philosophy-wrapper {
-        flex-direction: column;
-      }
-    }
+/* スマホ */
+@media (max-width: 700px) {
+  .philosophy-wrapper {
+    flex-direction: column;
+  }
+}
 
-    @media (max-width: 600px) {
-      .cover-title { font-size: 2.25rem; }
-      .caption { font-size: 0.85rem; }
-      .philosophy { font-size: 0.85rem; }
-      .card h2 { font-size: 1.05rem; }
-      .card p { font-size: 0.85rem; }
-    }
+@media (max-width: 600px) {
+  .cover-title { font-size: 2.25rem; }
+  .caption { font-size: 0.85rem; }
+  .philosophy { font-size: 0.85rem; }
+  .card h2 { font-size: 1.05rem; }
+  .card p { font-size: 0.85rem; }
+}
+
   </style>
 </head>
 
