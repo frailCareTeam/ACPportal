@@ -18,7 +18,7 @@
 /* 表紙 */
 .cover {
   width: 100%;
-  max-width: 1100px; /* ← カードと同じ幅に統一 */
+  max-width: 1100px;
   margin: 0 auto;
   padding: 40px 20px 20px;
   text-align: center;
@@ -31,16 +31,13 @@
   left: 20px;
   font-size: 3rem;
   font-weight: 800;
-  color: #000; /* 黒文字 */
+  color: #000;
   letter-spacing: 2px;
   pointer-events: none;
-
-  /* 白影＋黒影の二重構造で浮き上がらせる */
   text-shadow:
-    0 0 6px rgba(255,255,255,0.9),   /* 内側の白い縁取り */
-    3px 3px 8px rgba(0,0,0,0.45);    /* 外側の黒影 */
+    0 0 6px rgba(255,255,255,0.9),
+    3px 3px 8px rgba(0,0,0,0.45);
 }
-
 
 .cover img {
   width: 100%;
@@ -96,7 +93,7 @@
 
 /* カード一覧 */
 .container {
-  max-width: 1100px; /* ← cover と完全一致 */
+  max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -171,7 +168,7 @@
 
   <div class="philosophy-wrapper">
     <div class="philosophy">
-      <strong>【ACPの基本哲学】</strong><br>
+      <strong>【ACPの基本理解】</strong><br>
       ACPは「本人の価値観」を中心に据えながら、<br>
       生活・医療・支援の現実と折り合いをつけていくプロセスです。
     </div>
@@ -209,27 +206,32 @@
     </div>
 
     <div class="card decision">
-      <h2>
-        ⚖️ 意思決定支援が必要な場合<br>
-        <strong>（倫理カンファ用）</strong>
-      </h2>
+      <h2>⚖️ 意思決定支援が必要な場合<br><strong>（倫理カンファ用）</strong></h2>
       <p>関係者で最善の方針を決めるためのシート。</p>
       <a href="意思決定支援用.html">開く</a>
     </div>
+
+    <!-- ▼▼▼ ここに追加：治療と時間 ▼▼▼ -->
+    <div class="card decision">
+      <h2>⏳ 治療と時間の考え方</h2>
+      <p>治療がつくる時間と、その時間をどう使うかを整理するページ。</p>
+      <a href="治療と時間.html">開く</a>
+    </div>
+    <!-- ▲▲▲ 追加ここまで ▲▲▲ -->
 
     <div class="card lifeend">
       <h2>🌅 人生の最終段階を考えるページ</h2>
       <p>最近の変化や、これからの時間の過ごし方について考えるためのページです。</p>
       <a href="人生の終着点.html">開く</a>
     </div>
-　　 <div class="card medical">
+
+    <div class="card medical">
       <h2>📊 医療従事者向け：小樽とACP</h2>
       <p>小樽の医療構造とACP文化の提案スライド。</p>
       <a href="小樽とACP.html">開く</a>
     </div>
+
   </div>
 
 </body>
 </html>
-
-
